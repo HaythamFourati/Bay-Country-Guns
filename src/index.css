@@ -1,0 +1,363 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Accessibility: Respect reduced motion preference */
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes cell-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+}
+
+@theme {
+  --animate-cell-ripple: cell-ripple var(--duration, 400ms) ease-out var(--delay, 0ms);
+  /* Bay Country Guns - Dark Professional Palette */
+  --color-background: hsl(0 0% 7%);
+  --color-foreground: hsl(0 0% 98%);
+  --color-card: hsl(0 0% 11%);
+  --color-card-foreground: hsl(0 0% 98%);
+  --color-popover: hsl(0 0% 11%);
+  --color-popover-foreground: hsl(0 0% 98%);
+  /* Red accent - bold, professional */
+  --color-primary: hsl(0 72% 51%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  /* Dark secondary */
+  --color-secondary: hsl(0 0% 15%);
+  --color-secondary-foreground: hsl(0 0% 98%);
+  --color-muted: hsl(0 0% 18%);
+  --color-muted-foreground: hsl(0 0% 65%);
+  /* Red accent */
+  --color-accent: hsl(0 72% 51%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-border: hsl(0 0% 20%);
+  --color-input: hsl(0 0% 15%);
+  --color-ring: hsl(0 72% 51%);
+  --radius: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   Contact Form 7 Custom Styles
+   ============================================ */
+
+/* Reset CF7 defaults */
+.wpcf7 form {
+  margin: 0;
+}
+
+.wpcf7 form p {
+  margin: 0;
+}
+
+/* Custom form container */
+.cf7-custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Row layouts */
+.cf7-row {
+  display: grid;
+  gap: 1rem;
+}
+
+.cf7-two-col {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .cf7-two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Field wrapper */
+.cf7-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* CF7 wraps inputs in spans - make them block */
+.cf7-field .wpcf7-form-control-wrap {
+  display: block;
+}
+
+/* Remove default CF7 paragraph margins and line breaks for custom form */
+.cf7-custom-form p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.cf7-custom-form br {
+  display: none;
+}
+
+.cf7-custom-form .wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Labels */
+.cf7-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+/* Input, Select, Textarea base styles - target actual CF7 elements */
+.cf7-custom-form input[type="text"],
+.cf7-custom-form input[type="email"],
+.cf7-custom-form input[type="tel"],
+.cf7-custom-form select,
+.cf7-custom-form textarea {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  padding: 0 1rem;
+  font-size: 14px;
+  color: var(--color-foreground);
+  transition: all 0.2s;
+}
+
+.cf7-custom-form input[type="text"],
+.cf7-custom-form input[type="email"],
+.cf7-custom-form input[type="tel"],
+.cf7-custom-form select {
+  height: 2.75rem;
+}
+
+.cf7-custom-form textarea {
+  padding: 0.75rem 1rem;
+  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+/* Placeholders */
+.cf7-custom-form input::placeholder,
+.cf7-custom-form textarea::placeholder {
+  color: var(--color-muted-foreground);
+}
+
+/* Focus states */
+.cf7-custom-form input:focus,
+.cf7-custom-form select:focus,
+.cf7-custom-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  border-color: var(--color-primary);
+}
+
+/* Select dropdown arrow */
+.cf7-custom-form select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%236b7280%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+/* Submit button wrapper */
+.cf7-submit-wrap {
+  margin-top: 1rem;
+}
+
+/* Submit button */
+.cf7-custom-form input[type="submit"] {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cf7-custom-form input[type="submit"]:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 90%, black);
+  box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+/* Disclaimer text */
+.cf7-disclaimer {
+  font-size: 12px;
+  color: var(--color-muted-foreground);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* ========================================
+   FFL Transfer Form Specific Styles
+   ======================================== */
+
+/* Remove default CF7 paragraph margins and line breaks */
+.cf7-ffl-form p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.cf7-ffl-form br {
+  display: none;
+}
+
+/* FFL Form wrapper - target CF7 output */
+.cf7-ffl-form .wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* FFL Form inputs */
+.cf7-ffl-form input[type="text"],
+.cf7-ffl-form input[type="email"],
+.cf7-ffl-form input[type="tel"] {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.cf7-ffl-form input[type="text"]:focus,
+.cf7-ffl-form input[type="email"]:focus,
+.cf7-ffl-form input[type="tel"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  border-color: var(--color-primary);
+}
+
+.cf7-ffl-form input::placeholder {
+  color: var(--color-muted-foreground);
+}
+
+/* FFL Form acceptance checkbox */
+.cf7-ffl-form .wpcf7-acceptance {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.cf7-ffl-form .wpcf7-acceptance input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+}
+
+.cf7-ffl-form .wpcf7-acceptance .wpcf7-list-item-label {
+  font-size: 14px;
+  color: var(--color-foreground);
+  line-height: 1.5;
+}
+
+/* FFL Form submit button */
+.cf7-ffl-form input[type="submit"] {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cf7-ffl-form input[type="submit"]:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 90%, black);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+/* CF7 Response Messages */
+.wpcf7-response-output {
+  margin: 1rem 0 0 0 !important;
+  padding: 1rem !important;
+  border-radius: 0.75rem !important;
+  font-size: 14px !important;
+  border: none !important;
+}
+
+/* Success message */
+.wpcf7 form.sent .wpcf7-response-output {
+  background-color: hsl(142 76% 36% / 0.1) !important;
+  color: hsl(142 76% 36%) !important;
+}
+
+/* Validation error */
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  background-color: hsl(0 84% 60% / 0.1) !important;
+  color: hsl(0 84% 60%) !important;
+}
+
+/* Spam blocked */
+.wpcf7 form.spam .wpcf7-response-output {
+  background-color: hsl(38 92% 50% / 0.1) !important;
+  color: hsl(38 92% 50%) !important;
+}
+
+/* Field validation error tip */
+.wpcf7-not-valid-tip {
+  font-size: 12px !important;
+  color: hsl(0 84% 60%) !important;
+  margin-top: 0.25rem;
+}
+
+/* Invalid field border */
+.wpcf7-not-valid {
+  border-color: hsl(0 84% 60%) !important;
+}
+
+/* Hide CF7 spinner */
+.wpcf7-spinner {
+  display: none !important;
+}
+
+/* Loading state on submit */
+.wpcf7 form.submitting .cf7-submit {
+  opacity: 0.7;
+  cursor: wait;
+}

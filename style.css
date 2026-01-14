@@ -1,0 +1,17 @@
+/*
+  Theme Name: Bay Country Guns
+  Author: Bay Country Guns
+  Author URI: https://baycountryguns.com
+  Description: Professional dark theme for Bay Country Guns - Maryland's trusted source for firearms sales, training, maintenance, and compliance services.
+  Version: 1.0.0
+  Text Domain: bay-country-guns
+  License: GPL-2.0-or-later
+  License URI: https://www.gnu.org/licenses/gpl-2.0.html
+  Tags: dark, custom-colors, custom-logo, featured-images, full-width-template, one-column
+*/
+
+/*
+  This file only exists for WordPress to recognize the theme.
+  All styles are compiled from src/index.css to build/index.css via Tailwind CLI.
+  Do not add CSS here - it won't be loaded on the front-end.
+*/

@@ -1,0 +1,159 @@
+================================================================================
+CONTACT FORM 7 - GENERAL CONTACT FORM
+================================================================================
+Copy the code below into Contact Form 7 "Form" tab.
+After creating the form, replace YOUR_FORM_ID in section-contact.php with the actual form ID.
+
+================================================================================
+FORM CODE (paste in Form tab):
+================================================================================
+
+<div class="cf7-custom-form">
+
+<div class="cf7-row cf7-two-col">
+<div class="cf7-field">
+<label class="cf7-label">Full Name</label>
+[text* your-name placeholder "John Smith"]
+</div>
+<div class="cf7-field">
+<label class="cf7-label">Phone Number</label>
+[tel* your-phone placeholder "(410) 555-1234"]
+</div>
+</div>
+
+<div class="cf7-field">
+<label class="cf7-label">Email Address</label>
+[email* your-email placeholder "john@example.com"]
+</div>
+
+<div class="cf7-field">
+<label class="cf7-label">Service Needed</label>
+[select service include_blank "Select a service..." "Firearms Sales" "Firearm Customization" "Cleaning & Maintenance" "Firearm Training" "Digital Fingerprinting" "FFL Transfer" "Compliance Services" "Accessories & Gear" "Other"]
+</div>
+
+<div class="cf7-field">
+<label class="cf7-label">How Can We Help?</label>
+[textarea* your-message placeholder "Tell us about your firearm needs..."]
+</div>
+
+<div class="cf7-submit-wrap">
+[submit "Send Message"]
+</div>
+
+<p class="cf7-disclaimer">By submitting, you agree to our privacy policy. We'll never share your information.</p>
+
+</div>
+
+
+================================================================================
+MAIL TAB - Email Template:
+================================================================================
+
+To: baycountryguns@gmail.com
+From: [your-name] <[your-email]>
+Subject: New Contact Form Submission - [service]
+
+--- NEW CONTACT FORM SUBMISSION ---
+
+Name: [your-name]
+Phone: [your-phone]
+Email: [your-email]
+Service Needed: [service]
+
+MESSAGE:
+[your-message]
+
+---
+This message was sent from the contact form on Bay Country Guns website.
+
+
+================================================================================
+MAIL (2) TAB - Customer Confirmation (optional):
+================================================================================
+
+To: [your-email]
+Subject: Thank You for Contacting Bay Country Guns
+
+Dear [your-name],
+
+Thank you for reaching out to Bay Country Guns! We have received your message and will get back to you within 24-48 hours.
+
+YOUR MESSAGE DETAILS:
+- Service: [service]
+- Message: [your-message]
+
+In the meantime, feel free to give us a call at (410) 200-3543 if you need immediate assistance.
+
+BUSINESS HOURS:
+Tuesday – Saturday: 10:00 AM – 6:00 PM
+Sunday – Monday: Closed
+
+LOCATION:
+75 Mayo Road
+Edgewater, MD 21037
+
+Thank you for choosing Bay Country Guns!
+
+---
+Bay Country Guns
+Your Trusted Firearm Dealer Since 2000
+
+
+================================================================================
+MESSAGES TAB - Custom Messages:
+================================================================================
+
+Sender's message was sent successfully:
+Thank you for your message! We'll get back to you within 24-48 hours.
+
+Validation error:
+Please complete all required fields before submitting.
+
+
+================================================================================
+ADDITIONAL SETTINGS TAB:
+================================================================================
+
+demo_mode: off
+skip_mail: off
+
+
+================================================================================
+CSS STYLES (already in theme - src/index.css):
+================================================================================
+
+The theme already includes styling for .cf7-custom-form elements.
+These styles are defined in src/index.css and should work automatically.
+
+Key classes used:
+- .cf7-custom-form - Main form wrapper
+- .cf7-row - Form row container
+- .cf7-two-col - Two column layout
+- .cf7-field - Individual field wrapper
+- .cf7-label - Field label
+- .cf7-input - Text/email/tel inputs
+- .cf7-select - Select dropdown
+- .cf7-textarea - Textarea
+- .cf7-submit-wrap - Submit button wrapper
+- .cf7-submit - Submit button
+- .cf7-disclaimer - Privacy disclaimer text
+
+
+================================================================================
+AFTER CREATING THE FORM:
+================================================================================
+
+1. Go to Contact > Add New in WordPress admin
+2. Paste the FORM CODE above into the Form tab
+3. Configure the Mail tab with the email template
+4. (Optional) Configure Mail (2) for customer confirmation
+5. Update Messages tab with custom messages
+6. Save the form and copy the form ID
+7. In section-contact.php, replace YOUR_FORM_ID with the actual ID:
+   
+   Change this line:
+   echo do_shortcode('[contact-form-7 id="YOUR_FORM_ID" title="Contact Form"]');
+   
+   To something like:
+   echo do_shortcode('[contact-form-7 id="123" title="Contact Form"]');
+
