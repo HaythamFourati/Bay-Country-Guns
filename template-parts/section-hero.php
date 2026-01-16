@@ -29,6 +29,16 @@
   <!-- Content -->
   <div class="max-w-4xl mx-auto px-4 relative z-20 py-16 lg:py-20 pt-28 lg:pt-32 pb-24 lg:pb-28 text-center">
     <div class="hero-content">
+      <!-- Logo & Brand Name -->
+      <div class="flex flex-col items-center mb-8">
+        <img 
+          src="https://baycountryguns.com/wp-content/uploads/2023/12/bcg-final-png.png" 
+          alt="<?php echo esc_attr(SITE_NAME); ?>" 
+          class="w-32 sm:w-36 h-auto mb-4"
+        />
+        <span class="text-3xl sm:text-4xl font-bold text-foreground tracking-tight"><?php echo esc_html(SITE_NAME); ?></span>
+      </div>
+      
       <!-- Subtle tag -->
       <span class="inline-flex items-center justify-center mb-4 text-[13px] text-primary font-medium tracking-wide">
         <span class="w-8 h-px bg-primary/40 mr-3"></span>
@@ -56,27 +66,7 @@
         </a>
       </div>
       
-      <!-- Trust indicators -->
-      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 pt-8 border-t border-border/50">
-        <div class="flex flex-col items-center">
-          <span class="text-xl sm:text-2xl font-semibold text-foreground"><?php echo esc_html(SITE_YEARS_EXPERIENCE); ?></span>
-          <span class="text-[12px] sm:text-[13px] text-muted-foreground">Years Experience</span>
-        </div>
-        <div class="w-px h-8 sm:h-10 bg-border/50"></div>
-        <div class="flex flex-col items-center">
-          <div class="flex items-center gap-1">
-            <span class="text-xl sm:text-2xl font-semibold text-foreground"><?php echo esc_html(SITE_RATING); ?></span>
-            <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <span class="text-[12px] sm:text-[13px] text-muted-foreground"><?php echo esc_html(SITE_RATING_SOURCE); ?> Rating</span>
-        </div>
-        <div class="w-px h-8 sm:h-10 bg-border/50"></div>
-        <div class="flex flex-col items-center">
-          <span class="text-xl sm:text-2xl font-semibold text-foreground"><?php echo esc_html(SITE_CLIENTS_HELPED); ?></span>
-          <span class="text-[12px] sm:text-[13px] text-muted-foreground">Customers Served</span>
-        </div>
-      </div>
-
+      
     </div>
   </div>
 </section>
