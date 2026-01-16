@@ -13,6 +13,8 @@ get_header(); ?>
   <section class="relative pt-32 pb-12 lg:pt-36 lg:pb-16">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto">
+        <?php get_template_part('template-parts/hero-brand'); ?>
+        
         <span class="inline-flex items-center justify-center mb-4 text-[13px] text-primary font-medium tracking-wide">
           <span class="w-8 h-px bg-primary/40 mr-3"></span>
           FFL Services
@@ -40,7 +42,7 @@ get_header(); ?>
           <!-- Contact Form 7 Shortcode -->
           <!-- Replace FORM_ID with your actual Contact Form 7 form ID -->
           <!-- See cf7-ffl-transfer-form.txt for the form code to paste into CF7 -->
-          <?php echo do_shortcode('[contact-form-7 id="fb1e695" title="FFL TRANSFER REQUEST"]'); ?>
+          <?php echo do_shortcode('[contact-form-7 id="c90f4da" title="FFL Transfer"]'); ?>
         </div>
 
         <!-- Right Column - Info & Fees -->

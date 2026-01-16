@@ -14,6 +14,9 @@ get_header(); ?>
   <article class="single-post">
     <header class="pt-28 pb-12 lg:pt-32 lg:pb-16">
       <div class="max-w-3xl mx-auto px-4">
+        <div class="single-post-header text-center">
+          <?php get_template_part('template-parts/hero-brand'); ?>
+        </div>
         <div class="single-post-header">
           <!-- Back Link & Category -->
           <div class="flex items-center gap-6 mb-6">

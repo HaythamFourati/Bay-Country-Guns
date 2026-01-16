@@ -29,6 +29,8 @@ get_header(); ?>
     
     <div class="relative max-w-6xl mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center">
+        <?php get_template_part('template-parts/hero-brand'); ?>
+        
         <span class="inline-flex items-center justify-center mb-4 text-[13px] text-primary font-medium tracking-wide">
           <span class="w-8 h-px bg-primary/40 mr-3"></span>
           Our Services

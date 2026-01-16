@@ -13,6 +13,8 @@ get_header(); ?>
   <section class="relative pt-32 pb-12 lg:pt-36 lg:pb-16">
     <div class="max-w-6xl mx-auto px-4">
       <div class="blog-hero-content text-center max-w-3xl mx-auto">
+        <?php get_template_part('template-parts/hero-brand'); ?>
+        
         <span class="inline-flex items-center justify-center mb-4 text-[13px] text-primary font-medium tracking-wide">
           <span class="w-8 h-px bg-primary/40 mr-3"></span>
           Our Blog
