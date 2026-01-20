@@ -37,8 +37,8 @@ define('SITE_SOCIAL_TWITTER', '');
 define('SITE_SOCIAL_INSTAGRAM', 'https://instagram.com/baycountryguns');
 
 // External Service Links (easy to update)
-define('SITE_LINK_TRAINING', '/coming-soon/');
-define('SITE_LINK_FINGERPRINTING', '/coming-soon/');
+define('SITE_LINK_TRAINING', 'https://www.securitytrainingclasses.com/all-classes/');
+define('SITE_LINK_FINGERPRINTING', 'https://www.securitytrainingclasses.com/livescan-fingerprinting/');
 
 // Trust Indicators (customize for your industry)
 define('SITE_YEARS_EXPERIENCE', '20+');
