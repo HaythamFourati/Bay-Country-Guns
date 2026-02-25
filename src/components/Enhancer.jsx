@@ -114,6 +114,9 @@ function Enhancer() {
     const servicesToggle = document.getElementById('mobile-services-toggle')
     const servicesPanel = document.getElementById('mobile-services-panel')
     const servicesChevron = document.getElementById('mobile-services-chevron')
+    const trainingToggle = document.getElementById('mobile-training-toggle')
+    const trainingPanel = document.getElementById('mobile-training-panel')
+    const trainingChevron = document.getElementById('mobile-training-chevron')
     
     if (!toggleBtn || !menuPanel) return
 
@@ -125,9 +128,11 @@ function Enhancer() {
         menuPanel.classList.add('hidden')
         iconOpen?.classList.remove('hidden')
         iconClose?.classList.add('hidden')
-        // Also close services submenu
+        // Also close submenus
         servicesPanel?.classList.add('hidden')
         servicesChevron?.classList.remove('rotate-180')
+        trainingPanel?.classList.add('hidden')
+        trainingChevron?.classList.remove('rotate-180')
       } else {
         // Open menu
         menuPanel.classList.remove('hidden')
@@ -152,6 +157,20 @@ function Enhancer() {
       }
     }
 
+    const handleTrainingToggle = (e) => {
+      e.preventDefault()
+      if (!trainingPanel) return
+      const isOpen = !trainingPanel.classList.contains('hidden')
+      
+      if (isOpen) {
+        trainingPanel.classList.add('hidden')
+        trainingChevron?.classList.remove('rotate-180')
+      } else {
+        trainingPanel.classList.remove('hidden')
+        trainingChevron?.classList.add('rotate-180')
+      }
+    }
+
     // Close menu when clicking a link
     const handleLinkClick = () => {
       menuPanel.classList.add('hidden')
@@ -165,10 +184,12 @@ function Enhancer() {
 
     toggleBtn.addEventListener('click', handleToggle)
     servicesToggle?.addEventListener('click', handleServicesToggle)
+    trainingToggle?.addEventListener('click', handleTrainingToggle)
     
     return () => {
       toggleBtn.removeEventListener('click', handleToggle)
       servicesToggle?.removeEventListener('click', handleServicesToggle)
+      trainingToggle?.removeEventListener('click', handleTrainingToggle)
       menuLinks.forEach(link => link.removeEventListener('click', handleLinkClick))
     }
   }, [])

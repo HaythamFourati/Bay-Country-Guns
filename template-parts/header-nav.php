@@ -51,7 +51,26 @@
           </div>
         </div>
         <a href="<?php echo esc_url(SITE_LINK_FINGERPRINTING); ?>" target="_blank" rel="noopener" class="relative px-3 py-2 text-[13px] text-foreground/70 hover:text-primary font-medium transition-colors duration-200 rounded-lg hover:bg-primary/10">Fingerprinting</a>
-        <a href="<?php echo esc_url(SITE_LINK_TRAINING); ?>" target="_blank" rel="noopener" class="relative px-3 py-2 text-[13px] text-foreground/70 hover:text-primary font-medium transition-colors duration-200 rounded-lg hover:bg-primary/10">BCG Defensive Training</a>
+        <!-- BCG Defensive Training Dropdown -->
+        <div class="relative group">
+          <button class="relative px-3 py-2 text-[13px] text-foreground/70 hover:text-primary font-medium transition-colors duration-200 rounded-lg hover:bg-primary/10 flex items-center gap-1">
+            BCG Defensive Training
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="w-72 bg-card/95 backdrop-blur-md border border-border rounded-xl shadow-xl shadow-black/20 py-2 overflow-hidden">
+              <a href="<?php echo esc_url(SITE_LINK_TRAINING_CCW); ?>" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-foreground/70 hover:text-primary hover:bg-primary/10 transition-colors">
+                <svg class="w-4 h-4 text-primary/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Maryland Wear and Carry Permit (CCW)
+              </a>
+              <a href="<?php echo esc_url(SITE_LINK_TRAINING_HQL); ?>" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-foreground/70 hover:text-primary hover:bg-primary/10 transition-colors">
+                <svg class="w-4 h-4 text-primary/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Maryland Handgun Qualification License (HQL)
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="<?php echo home_url('/ffl-transfer-request/'); ?>" class="relative px-3 py-2 text-[13px] text-foreground/70 hover:text-primary font-medium transition-colors duration-200 rounded-lg hover:bg-primary/10">FFL Transfer</a>
         <a href="<?php echo home_url('/blog/'); ?>" class="relative px-3 py-2 text-[13px] text-foreground/70 hover:text-primary font-medium transition-colors duration-200 rounded-lg hover:bg-primary/10">Blog</a>
         <a href="#contact" class="relative px-3 py-2 text-[13px] text-foreground/70 hover:text-primary font-medium transition-colors duration-200 rounded-lg hover:bg-primary/10">Contact</a>
@@ -106,7 +125,17 @@
             </div>
           </div>
           <a href="<?php echo esc_url(SITE_LINK_FINGERPRINTING); ?>" target="_blank" rel="noopener" class="px-3 py-2.5 text-[14px] text-foreground font-medium rounded-lg hover:bg-primary/10 transition-colors">Fingerprinting</a>
-          <a href="<?php echo esc_url(SITE_LINK_TRAINING); ?>" target="_blank" rel="noopener" class="px-3 py-2.5 text-[14px] text-foreground font-medium rounded-lg hover:bg-primary/10 transition-colors">Training</a>
+          <!-- Mobile Training Accordion -->
+          <div class="mobile-training-accordion">
+            <button id="mobile-training-toggle" class="w-full flex items-center justify-between px-3 py-2.5 text-[14px] text-foreground font-medium rounded-lg hover:bg-primary/10 transition-colors">
+              BCG Defensive Training
+              <svg id="mobile-training-chevron" class="w-4 h-4 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div id="mobile-training-panel" class="hidden pl-3 mt-1 space-y-1 border-l-2 border-primary/20 ml-3">
+              <a href="<?php echo esc_url(SITE_LINK_TRAINING_CCW); ?>" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 text-[13px] text-foreground/70 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors">Maryland Wear and Carry Permit (CCW)</a>
+              <a href="<?php echo esc_url(SITE_LINK_TRAINING_HQL); ?>" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 text-[13px] text-foreground/70 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors">Maryland Handgun Qualification License (HQL)</a>
+            </div>
+          </div>
           <a href="<?php echo home_url('/ffl-transfer-request/'); ?>" class="px-3 py-2.5 text-[14px] text-foreground font-medium rounded-lg hover:bg-primary/10 transition-colors">FFL Transfer</a>
           <a href="<?php echo home_url('/blog/'); ?>" class="px-3 py-2.5 text-[14px] text-foreground font-medium rounded-lg hover:bg-primary/10 transition-colors">Blog</a>
           <a href="#contact" class="px-3 py-2.5 text-[14px] text-foreground font-medium rounded-lg hover:bg-primary/10 transition-colors">Contact</a>
