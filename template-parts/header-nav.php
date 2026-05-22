@@ -68,6 +68,10 @@
                 <svg class="w-4 h-4 text-primary/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                 Maryland Handgun Qualification License (HQL)
               </a>
+              <a href="<?php echo esc_url(SITE_LINK_TRAINING_CCW_RENEWAL); ?>" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-foreground/70 hover:text-primary hover:bg-primary/10 transition-colors">
+                <svg class="w-4 h-4 text-primary/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0-7-9-7-9-7s-9 0-9 7v3c0 7 9 7 9 7s9 0 9-7v-3z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+                Maryland Wear and Carry Permit Renewal
+              </a>
             </div>
           </div>
         </div>
@@ -134,6 +138,7 @@
             <div id="mobile-training-panel" class="hidden pl-3 mt-1 space-y-1 border-l-2 border-primary/20 ml-3">
               <a href="<?php echo esc_url(SITE_LINK_TRAINING_CCW); ?>" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 text-[13px] text-foreground/70 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors">Maryland Wear and Carry Permit (CCW)</a>
               <a href="<?php echo esc_url(SITE_LINK_TRAINING_HQL); ?>" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 text-[13px] text-foreground/70 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors">Maryland Handgun Qualification License (HQL)</a>
+              <a href="<?php echo esc_url(SITE_LINK_TRAINING_CCW_RENEWAL); ?>" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 text-[13px] text-foreground/70 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors">Maryland Wear and Carry Permit Renewal</a>
             </div>
           </div>
           <a href="<?php echo home_url('/ffl-transfer-request/'); ?>" class="px-3 py-2.5 text-[14px] text-foreground font-medium rounded-lg hover:bg-primary/10 transition-colors">FFL Transfer</a>

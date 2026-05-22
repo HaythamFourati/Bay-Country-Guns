@@ -43,6 +43,7 @@ define('SITE_LINK_FINGERPRINTING', '/live-scan-fingerprinting/');
 // Training Booking Links
 define('SITE_LINK_TRAINING_CCW', 'https://api.leadconnectorhq.com/widget/booking/8xfHA0KBsm1ArXk8m5js');
 define('SITE_LINK_TRAINING_HQL', 'https://api.leadconnectorhq.com/widget/booking/tsiDVPA406FPTprHrIkE');
+define('SITE_LINK_TRAINING_CCW_RENEWAL', 'https://api.leadconnectorhq.com/widget/booking/YyEQXcyrBKCALhXs7yPD');
 
 // Trust Indicators (customize for your industry)
 define('SITE_YEARS_EXPERIENCE', '20+');

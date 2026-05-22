@@ -68,7 +68,7 @@ get_header(); ?>
         </p>
       </div>
       
-      <div class="grid lg:grid-cols-2 gap-8">
+      <div class="grid lg:grid-cols-3 gap-8">
         <!-- CCW Course Card -->
         <div class="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
           <div class="p-8">
@@ -154,6 +154,51 @@ get_header(); ?>
             
             <a href="<?php echo esc_url(SITE_LINK_TRAINING_HQL); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-full gap-2 px-6 py-3.5 rounded-xl bg-primary text-white text-[15px] font-medium hover:bg-primary/90 transition-all duration-200 hover:shadow-lg hover:shadow-primary/25">
               Book HQL Course
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CCW Renewal Course Card -->
+        <div class="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
+          <div class="p-8">
+            <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0-7-9-7-9-7s-9 0-9 7v3c0 7 9 7 9 7s9 0 9-7v-3z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+            </div>
+            
+            <h3 class="text-2xl font-semibold text-foreground mb-3">
+              Maryland Wear and Carry Permit Renewal
+            </h3>
+            
+            <p class="text-muted-foreground mb-6 leading-relaxed">
+              Renewal course for existing Maryland Wear and Carry Permit holders. Stay current with updated laws and maintain your certification.
+            </p>
+            
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-foreground">Streamlined renewal process</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-foreground">Updated Maryland law review</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-foreground">Qualification shooting test</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-foreground">Renewal certificate issued</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-foreground">For current permit holders only</span>
+              </div>
+            </div>
+            
+            <a href="<?php echo esc_url(SITE_LINK_TRAINING_CCW_RENEWAL); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-full gap-2 px-6 py-3.5 rounded-xl bg-primary text-white text-[15px] font-medium hover:bg-primary/90 transition-all duration-200 hover:shadow-lg hover:shadow-primary/25">
+              Book Renewal Course
               <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
